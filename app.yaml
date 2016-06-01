@@ -1,0 +1,13 @@
+runtime: nodejs
+vm: true
+
+skip_files:
+ - ^node_modules$
+
+network:
+  forwarded_ports:
+  - 65080
+  instance_tag: websocket
+  
+vm_health_check:
+  enable_health_check: false

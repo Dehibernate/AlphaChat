@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <title>AlphaChat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body data-external-ip="<%= externalip %>" data-userdata="<%= userdata %>">
+<div id="top-bar">
+    <div align="right">
+        <button id="logout" onclick="location.href='/logout'"><i class="fa fa-arrow-left"></i>Logout</button>
+    </div>
+</div>
+
+<div style="float:left;width:100px;border-right:1px solid black;height:400px;padding:10px;overflow:scroll-y;margin-top:25px;">
+    <b style="margin-bottom:5px;">ROOMS</b>
+    <div id="rooms"></div>
+</div>
+
+<div>
+    <ul id="messages"></ul>
+    <form id="send-message">
+        <input id="m" autocomplete="off"/>
+        <button><i class="fa fa-arrow-right"></i> Send</button>
+    </form>
+</div>
+
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="js/client.js"></script>
+</body>
+</html>
